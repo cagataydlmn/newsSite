@@ -8,6 +8,8 @@ import {
  import HomePage from './pages/HomePage';
  import Login from './components/Login'
 import InsertNewsPage from './pages/InsertNewsPage';
+import CategoryListPage from './pages/CategoryListPage';
+import NewsDetail from './components/NewsDetail';
 
 function App() {
   const router = createBrowserRouter([
@@ -22,6 +24,14 @@ function App() {
     {
       path:"/insertNews",
       element:<InsertNewsPage/>
+    },
+    {
+      path:"/category/:category",
+      element:<CategoryListPage/>
+    },
+    {
+      path:'/:newsTitle',
+      element:<NewsDetail/>
     }
   ])
 

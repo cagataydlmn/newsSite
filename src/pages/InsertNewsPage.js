@@ -38,7 +38,7 @@ export default function InsertNewsPage() {
             <option value="spor">Spor</option>
             <option value="hayat">Hayat</option>
             <option value="dunya">Dünya</option>
-            <option value="ekonomi">Hayat</option>
+            <option value="ekonomi">Ekonomi </option>
             <option value="astroloji">Astroloji</option>
             <option value="diger">Diğer</option>
             </select>

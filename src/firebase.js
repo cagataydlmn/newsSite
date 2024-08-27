@@ -1,9 +1,10 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import {
   collection,
     getFirestore,
-    addDoc
+    addDoc,
+    onSnapshot,
+    query
   
   } from "firebase/firestore";
 
@@ -25,7 +26,15 @@ export const db = getFirestore(app);
 export const addNews=async(data)=>{
   const result = await addDoc(collection(db,"news"),data)
 }
-
+export const getNews=async(callback)=>{
+  return onSnapshot(query(collection(db,"news")),(snapshot)=>{
+    const news =snapshot.docs.map((doc)=>({
+      id:doc.id,
+      ...doc.data(),
+    }));
+    callback(news)
+  })
+}
 
 export { firestore };
 

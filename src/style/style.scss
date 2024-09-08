@@ -122,3 +122,71 @@
      }  
     }
 }
+
+.categories__news{
+    .categories__news__title{
+        font-size: 35px;
+        width: 70%;
+        margin: auto;
+    }
+    &__item{
+        width: 70%;
+        margin: auto;
+    }
+}
+.newsDetail{
+    &__general{
+        width: 70%;
+        margin: auto;
+    }
+}
+.swiper{
+    width: 70%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    &-button-prev{
+        background-color: gray;
+        border-radius: 7px;
+
+        &::after {
+            color: white;
+            font-size: 17px !important;
+            font-weight: bold !important;
+          }
+    }
+    &-button-next{
+        &::after {
+            color: white;
+            font-size: 17px !important;
+
+          }
+        background-color: gray;
+        border-radius: 7px;
+    }
+    &-pagination-bullet{
+        background-color: white !important;
+    }
+}
+.underSwiper{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    &__item{
+        width: 30%;
+        display: flex;
+        background-color: #f8f7f5;
+        margin: 19px;
+        &__text{
+            font-size: 20px;
+            font-weight: 600;
+            padding: 20px;
+            color: black;
+            text-decoration: none;
+        }
+
+    }
+    img{
+        width: 50% !important;
+    }
+}

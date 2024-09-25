@@ -25,6 +25,7 @@ export const db = getFirestore(app);
 
 export const addNews=async(data)=>{
   const result = await addDoc(collection(db,"news"),data)
+  return(result)
 }
 export const getNews=async(callback)=>{
   return onSnapshot(query(collection(db,"news")),(snapshot)=>{

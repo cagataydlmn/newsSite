@@ -33,7 +33,7 @@ export default function NewsDetail() {
       {filteredNews.length > 0 ? (
         filteredNews.map((item) => (
           <div className="newsDetail__general" key={item.id}>
-            <div>{item.newsCategory}</div>
+            <h3>{item.newsCategory}</h3>
             <h1>{item.newsTitle}</h1>
             <div>{item.newsSubtitle}</div>
             <img src={item.newsImage} alt={item.newsImage} />

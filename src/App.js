@@ -10,6 +10,7 @@ import {
 import InsertNewsPage from './pages/InsertNewsPage';
 import CategoryListPage from './pages/CategoryListPage';
 import NewsDetail from './components/NewsDetail';
+import Rate from './components/Rate';
 
 function App() {
   const router = createBrowserRouter([
@@ -32,6 +33,10 @@ function App() {
     {
       path:'/:newsTitle',
       element:<NewsDetail/>
+    },
+    {
+      path:'/rate',
+      element:<Rate/>
     }
   ])
 

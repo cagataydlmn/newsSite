@@ -13,11 +13,15 @@ export default function Nav() {
     "Diğer",
   ]);
   return (
+    <div className="nav__tops">
+
     <nav className="nav__bar">
         <NavLink to="/">Ana Sayfa</NavLink>
         {navItems.map((item, itemIndex) => (
           <NavLink to={`/category/${item}`}>{item}</NavLink>
         ))}
     </nav>
+    </div>
+
   );
 }

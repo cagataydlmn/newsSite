@@ -24,14 +24,18 @@ export default function CategoryListPage() {
     <div className="categories__news">
       <Nav />
       <h2 className="categories__news__title">- {category} - </h2>
+      <div className="category__list">
+
       {newsGetByCategory.map((item) => (
         <Link to={`/${item.newsTitle}`} className="categories__news__item" key={item.id}>
           <img src={item.newsImage} alt={item.newsTitle} />
-          <div className="home__top__box__title">{item.newsTitle}</div>
-          <div className="">{item.newsSubtitle}</div>
+          <div className="home__top__box__title__category">{item.newsTitle}</div>
+          <div className="home__top__box__title__category__subtitle">{item.newsSubtitle}</div>
           {/* <div dangerouslySetInnerHTML={{ __html: item.newsContent }} /> */}
         </Link>
       ))}
+            </div>
+
     </div>
   );
 }

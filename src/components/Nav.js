@@ -45,13 +45,12 @@ export default function Nav() {
       <nav className={menuClass}>
         <NavLink to="/">Ana Sayfa</NavLink>
         {navItems.map((item, itemIndex) => (
-          <NavLink key={itemIndex} to={`/category/${item}`}>
+          <NavLink   style={{ textDecoration: "none" }}          key={itemIndex} to={`/category/${item}`}>
             <div className="active">
               {item}
             </div>
           </NavLink>
         ))}
-        <NavLink to="/insertNews">Haber ekle</NavLink>
       </nav>
 
 </div>

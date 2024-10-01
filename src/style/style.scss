@@ -1,3 +1,6 @@
+body{
+    margin: 0;
+}
 .background {
     background-color: black;
 }
@@ -261,8 +264,23 @@
         display: block;
     }
     .burger-menu-close{
-        display: none;
+        position: absolute;
+  top: 0;
+  left: -100%; // Ekran dışında başlat
+  z-index: 11;
+  background: white;
+  width: 40%;
+  height: 100vh; // Tam ekran yüksekliği
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  color: black;
+  gap: 10px;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  transform: translateX(-100%); // Soldan dışarıda başlat
+  opacity: 0; // Görünmez başlat
     }
+
     .burger-menu-open{
         position: absolute;
         z-index: 11;
@@ -270,9 +288,13 @@
         width: 40%;
         display: flex;
         flex-direction: column;
-        font-size: 23px;
+        font-size: 30px;
         color: black;
         gap: 10px;
+        height: 99%;
+        transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+        background: rgba(112, 111, 111, 0.9);
+
     }
     .active{
         color: black;
@@ -280,5 +302,25 @@
     a{
         text-decoration: none;
     }
+    }
+    .hava{
+        display: none;
+    }
+   
+    .home{
+        &__top{
+            display: none;
+        }
+        .swiper{
+            width: 100%; 
+        }
+    }
+    .underSwiper{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        &__item{
+            width: 100%;
+        }
     }
 }

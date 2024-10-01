@@ -16,7 +16,6 @@ export default function Nav() {
   const [isOpen, setOpen] = useState(false);
   const [menuClass, setMenuClass] = useState("burger-menu-close");
 
-  // isOpen durumunu izleyerek menuClass'ı güncelleme
   useEffect(() => {
     if (isOpen) {
       setMenuClass("burger-menu-open");
@@ -27,9 +26,8 @@ export default function Nav() {
 
   return (
     <div className="nav__tops">
-      {/* Normal Menü */}
       <nav className="nav__bar">
-        <NavLink to="/">Ana Sayfa</NavLink>
+        <NavLink  to="/">Ana Sayfa</NavLink>
         {navItems.map((item, itemIndex) => (
           <NavLink key={itemIndex} to={`/category/${item}`}>
             {item}
@@ -43,7 +41,7 @@ export default function Nav() {
         <Hamburger toggled={isOpen} toggle={setOpen} />
         </div>
       <nav className={menuClass}>
-        <NavLink to="/">Ana Sayfa</NavLink>
+        <NavLink style={{ textDecoration: "none" , color:"black" }} to="/">Ana Sayfa</NavLink>
         {navItems.map((item, itemIndex) => (
           <NavLink   style={{ textDecoration: "none" }}          key={itemIndex} to={`/category/${item}`}>
             <div className="active">
